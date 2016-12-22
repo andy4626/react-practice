@@ -1,0 +1,17 @@
+.card{
+  width: 85vw;
+  border: 1px solid black;
+  padding: 15px;
+  box-shadow: 6px 6px 3px #888888;
+  font-family: Verdana;
+  margin: 10px auto;
+}
+.card:hover{
+  box-shadow: 10px 10px 5px #888888;
+}
+.card--name{
+  margin: 5px 10px;
+}
+.card--desc{
+  margin: 10px
+}

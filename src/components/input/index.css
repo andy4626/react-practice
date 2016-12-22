@@ -1,0 +1,32 @@
+.form--field{
+  margin-left: 20px;
+  padding: 6px 10px;
+  margin-bottom: 7px;
+  border-style: inset;
+  border-width: 3px;
+}
+textarea {
+  width: 60vw;
+  resize: none;
+  vertical-align: middle;
+}
+.form{
+  width:90vw;
+  margin: 3vh auto;
+  border: 1px solid black;
+  padding: 10px;
+  background-color:#D3D3D3;
+
+}
+label{
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+.form--submit{
+  cursor: pointer;
+  background-color: #00004d;
+  margin-left: 55vw;
+  font-weight: bold;
+  color: white;
+}
