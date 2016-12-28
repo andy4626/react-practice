@@ -1,20 +1,18 @@
-import React, {
-Component
-} from 'react';
-import './index.css'
+import React, { Component, PropTypes } from 'react';
+import './index.css';
 
 const Card = (props) => {
   return (
     <div className="card">
-      <h4 className="card--name">{props.name}</h4>
-      <p className="card--desc">{props.description}</p>
+      <p className="card--name">by {props.name}</p>
+      <h4 className="card--desc">{props.newsfeed}</h4>
     </div>
   );
 };
 
 Card.propTypes = {
   name: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired
+  newsfeed: React.PropTypes.string.isRequired
 };
 
 export default Card;

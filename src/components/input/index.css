@@ -5,28 +5,19 @@
   border-style: inset;
   border-width: 3px;
 }
-textarea {
-  width: 60vw;
-  resize: none;
-  vertical-align: middle;
-}
 .form{
   width:90vw;
   margin: 3vh auto;
-  border: 1px solid black;
+  border-style:outset;
+  border-width: 2px;
   padding: 10px;
   background-color:#D3D3D3;
 
 }
-label{
-  display: inline-block;
-  width: 120px;
-  text-align: right;
-}
 .form--submit{
   cursor: pointer;
   background-color: #00004d;
-  margin-left: 55vw;
+  margin-left: 5vw;
   font-weight: bold;
   color: white;
 }

@@ -5,11 +5,11 @@ import './Header.css';
 class NavBar extends React.Component {
   render () {
     return (
-      <nav className="ak-nav">
-        <ul className="primary">
-          <li className="ak-nav--item"><IndexLink to="/">Home</IndexLink></li>
-          <li className="ak-nav--link"><Link to="about">About</Link></li>
-          <li className="ak-nav--content"><Link to="page">Feed</Link></li>
+      <nav className="nav">
+        <ul className="nav--primary">
+          <li><IndexLink activeClassName="nav--active" to="/">Home</IndexLink></li>
+          <li><Link activeClassName="nav--active" to="about">About</Link></li>
+          <li ><Link activeClassName="nav--active" to="page">Feed</Link></li>
         </ul>
       </nav>
     );

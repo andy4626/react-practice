@@ -1,19 +1,17 @@
-import React, {
-Component, PropTypes
-} from 'react';
+import React, { Component, PropTypes } from 'react';
 import Card from '../card/index';
 
 class Feed extends Component {
   constructor(props){
     super(props);
-    this.state = {newsfeed: this.props.newsfeed};
+    this.state = {data: this.props.data};
   }
 
   render(){
     return (
       <div>
-        {this.state.newsfeed.map(function(feed, index){
-          return <Card key={index} name={feed[0]} description={feed[1]} />;
+        {this.state.data.map(function(feed, index){
+          return <Card key={index} name={feed.name} newsfeed={feed.newsfeed} />;
         })}
         </div>
       );
@@ -21,7 +19,7 @@ class Feed extends Component {
 }
 
 Feed.PropTypes={
-  newsfeed: React.PropTypes.array
+  data: React.PropTypes.array
 };
 
 

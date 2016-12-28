@@ -1,0 +1,13 @@
+.form--error{
+  color: #8a6d3b;
+  /*background-color: red;*/
+  border-color: #8a6d3b;
+}
+.input--error__message{
+  color: red;
+}
+.form--label{
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
