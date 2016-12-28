@@ -19,7 +19,7 @@ class AndrewLayout extends Component {
 
   render () {
     return (
-      <div>
+      <div className="btn--container">
         <button className="btn" onClick={this.add}>Add one</button>
         <button className="btn" onClick={this.subtract}>Subtract one</button>
         <p>Current Number: {this.state.count}</p>

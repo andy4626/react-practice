@@ -1,5 +1,5 @@
 .btn{
-    background-color: #4CAF50; /* Green */
+    background-color: navy;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -8,4 +8,7 @@
     display: inline-block;
     font-size: 16px;
     margin: 10px;
+}
+.btn--container{
+  padding: auto;
 }
