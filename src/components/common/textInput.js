@@ -19,7 +19,6 @@ class TextInput extends Component{
         <div className={wrapperClass}>
           <input type="text"
             name={this.props.name}
-            className="form--control"
             placeholder={this.props.name}
             ref={this.props.name}
             value={this.props.value}
