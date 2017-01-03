@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Feed from '../feed/index';
-import Input from '../input/index';
+import NewsInput from '../input/index';
 
 class Page extends Component {
   constructor(props){
@@ -12,7 +12,6 @@ class Page extends Component {
     };
     this.addFeed = this.addFeed.bind(this);
     this.setNewsfeedState = this.setNewsfeedState.bind(this);
-
     this.formIsValid = this.formIsValid.bind(this);
   }
 
@@ -26,43 +25,40 @@ class Page extends Component {
 
   formIsValid(){
     let formIsValid = true;
-    this.setState({errors: {}});
+    let errors = {};
+    console.log(this.state.newsfeed);
+
     if(this.state.newsfeed.name.length == 0 ){
-      let errors = this.state.errors;
       errors.name= "C'mon type in your name";
-      this.setState({errors: errors});
       formIsValid = false;
     }
     if(this.state.newsfeed.newsfeed.length == 0 ){
-      let errors = this.state.errors;
       errors.newsfeed= "C'mon type in your newsfeed";
-      this.setState({errors: errors});
       formIsValid = false;
     }
     if(this.state.newsfeed.name.length > 0 && this.state.newsfeed.newsfeed.length > 0){
-      let errors = "";
-      this.setState({errors: errors});
+      errors = {};
       formIsValid = true;
     }
-    this.setState({errors: this.state.errors});
+    this.setState({errors: errors});
     return formIsValid;
   }
 
   addFeed(event){
     event.preventDefault();
-    if(!this.formIsValid()){
-      return;
+    if(this.formIsValid()){
+      let newData = this.state.data;
+      let newNewsfeed = {name:'', newsfeed:''};
+      newData.push(this.state.newsfeed);
+      this.setState({newsfeed: newNewsfeed, data: newData});
     }
-    let newData = this.state.data;
-    let newNewsfeed = {};
-    newData.push(this.state.newsfeed);
-    return this.setState({newsfeed: newNewsfeed, data: newData});
   }
 
   render(){
     return(
       <div>
-        <Input
+      //naming convention
+        <NewsInput
           newsfeed={this.state.newsfeed}
           onChange={this.setNewsfeedState}
           onSubmit={this.addFeed}
